@@ -1,0 +1,29 @@
+{% extends 'padre.html' %} {% block contenidoQueCambia %}
+
+<h1 class="my-3">Lista de Pokemon</h1>
+
+<form class="d-flex flex-column justify-content-center align-items-center" action="{% url 'ListaPokemon' %}" method="get">
+    <p>Nombre: <input type="text" name="nombrePokemon" /></p>
+    <button type="submit" class="button">Buscar</button>
+</form>
+
+<main class="container-fluid d-flex flex-row flex-wrap justify-content-around align-items-center">
+    {% for pokemon in listaPokemon %}
+    <div class="tierra d-flex flex-column flex-wrap justify-content-center align-items-center" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
+        <img class="tam-medallas" src="{{pokemon.imageUrl}}" alt="Gengar" />
+        <h2>{{pokemon.nombre}}</h2>
+        <ul>
+            <li class="my-8"># {{pokemon.numPokedex}}</li>
+            <li>Tipo: {{pokemon.tipo}}</li>
+        </ul>
+    </div>
+    {% endfor %}
+
+    
+    {% if mensaje %}
+        <p>{{mensaje}}</p>
+    {% endif %}
+        
+</main>
+
+{% endblock contenidoQueCambia %}

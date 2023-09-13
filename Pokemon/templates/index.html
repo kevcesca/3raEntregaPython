@@ -1,0 +1,35 @@
+{% extends 'padre.html' %} 
+{% block contenidoQueCambia %}
+
+<main class="container-fluid d-flex flex-row flex-wrap justify-content-around align-items-center">
+
+    <div class="d-flex justify-content-center align-items-center flex-column">
+        <a class="d-flex flex-column justify-content-center align-items-center mx-2 my-3 btn btn-primary tam-boton" href="{% url 'ListaPokemon' %}">
+            <p class="text-button">Lista de Pokemon</p>
+        </a>
+        <a class="d-flex flex-column justify-content-center align-items-center mx-2 my-3 btn btn-primary tam-boton" href="{% url 'FormularioPokemon' %}">
+            <p class="text-button">Crear Pokemon</p>
+        </a>
+    </div>
+
+    <div class="d-flex justify-content-center align-items-center flex-column">
+        <a class="d-flex flex-column justify-content-center align-items-center mx-2 my-3 btn btn-primary tam-boton" href="{% url 'ListaEntrenador' %}">
+            <p class="text-button">Lista de Entrenadores</p>
+        </a>
+        <a class="d-flex flex-column justify-content-center align-items-center mx-2 my-3 btn btn-primary tam-boton" href="{% url 'FormularioEntrenador' %}">
+            <p class="text-button">Crear Entrenador</p>
+        </a>
+    </div>
+
+    <div class="d-flex justify-content-center align-items-center flex-column">
+        <a class="d-flex flex-column justify-content-center align-items-center mx-2 my-3 btn btn-primary tam-boton" href="{% url 'ListaEnfrentamiento' %}">
+            <p class="text-button">Lista de Enfrentamientos</p>
+        </a>
+        <a class="d-flex flex-column justify-content-center align-items-center mx-2 my-3 btn btn-primary tam-boton" href="{% url 'FormularioEnfrentamiento' %}">
+            <p class="text-button">Crear Enfrentamiento</p>
+        </a>
+    </div>
+
+</main>
+
+{% endblock contenidoQueCambia %}

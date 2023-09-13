@@ -1,0 +1,66 @@
+{% extends 'padre.html' %} 
+{% block contenidoQueCambia %}
+
+<h1 class="my-3">Lista de Entrenadores</h1>
+<main class="container-fluid d-flex flex-row flex-wrap justify-content-around align-items-center">
+
+    
+    
+    {% for entrenador in listaEntrenador %}
+
+    <div class="entrenador d-flex flex-column flex-wrap justify-content-center align-items-center">
+        <h2>{{entrenador.nombre}}</h2>
+        <!-- <div class="d-flex flex-row justify-content-center align-items-center">
+            <img class="tam-medallas" src="{{entrenador.pokemon1.imageUrl}}" alt="{{entrenador.pokemon1.nombre}}">
+            <img class="tam-medallas" src="{{entrenador.pokemon2.imageUrl}}" alt="{{entrenador.pokemon2.nombre}}">
+            <img class="tam-medallas" src="{{entrenador.pokemon3.imageUrl}}" alt="{{entrenador.pokemon3.nombre}}">
+            <img class="tam-medallas" src="{{entrenador.pokemon4.imageUrl}}" alt="{{entrenador.pokemon4.nombre}}">
+            <img class="tam-medallas" src="{{entrenador.pokemon5.imageUrl}}" alt="{{entrenador.pokemon5.nombre}}">
+            <img class="tam-medallas" src="{{entrenador.pokemon6.imageUrl}}" alt="{{entrenador.pokemon6.nombre}}">
+        </div> -->
+
+        <div class="d-flex flex-row justify-content-center align-items-center">
+            <div class="d-flex flex-column justify-content-end align-items-center contenedorpok">
+                <img class="tam-medallas" src="{{entrenador.pokemon1.imageUrl}}" alt="{{entrenador.pokemon1.nombre}}">
+                <p class="mx-2">{{entrenador.pokemon1.nombre}}</p>
+            </div>
+            <div class="d-flex flex-column justify-content-end align-items-center contenedorpok">
+                <img class="tam-medallas" src="{{entrenador.pokemon2.imageUrl}}" alt="{{entrenador.pokemon1.nombre}}">
+                <p class="mx-2">{{entrenador.pokemon2.nombre}}</p>
+            </div>
+            <div class="d-flex flex-column justify-content-end align-items-center contenedorpok">
+                <img class="tam-medallas" src="{{entrenador.pokemon3.imageUrl}}" alt="{{entrenador.pokemon1.nombre}}">
+                <p class="mx-2">{{entrenador.pokemon3.nombre}}</p>
+            </div>
+            <div class="d-flex flex-column justify-content-end align-items-center contenedorpok">
+                <img class="tam-medallas" src="{{entrenador.pokemon4.imageUrl}}" alt="{{entrenador.pokemon1.nombre}}">
+                <p class="mx-2">{{entrenador.pokemon4.nombre}}</p>
+            </div>
+            <div class="d-flex flex-column justify-content-end align-items-center contenedorpok">
+                <img class="tam-medallas" src="{{entrenador.pokemon5.imageUrl}}" alt="{{entrenador.pokemon1.nombre}}">
+                <p class="mx-2">{{entrenador.pokemon5.nombre}}</p>
+            </div>
+            <div class="d-flex flex-column justify-content-end align-items-center contenedorpok">
+                <img class="tam-medallas" src="{{entrenador.pokemon6.imageUrl}}" alt="{{entrenador.pokemon1.nombre}}">
+                <p class="mx-2">{{entrenador.pokemon6.nombre}}</p>
+            </div>
+        </div>
+
+        <!-- <div class="d-flex flex-row justify-content-center align-items-center">
+            <p class="mx-2">{{entrenador.pokemon1.nombre}}</p>
+            <p class="mx-2">{{entrenador.pokemon2.nombre}}</p>
+            <p class="mx-2">{{entrenador.pokemon3.nombre}}</p>
+            <p class="mx-2">{{entrenador.pokemon4.nombre}}</p>
+            <p class="mx-2">{{entrenador.pokemon5.nombre}}</p>
+            <p class="mx-2">{{entrenador.pokemon6.nombre}}</p>
+        </div> -->
+        
+
+    </div>
+
+    {% endfor %}
+        
+
+</main>
+
+{% endblock contenidoQueCambia %}
